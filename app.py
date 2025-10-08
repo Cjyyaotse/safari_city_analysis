@@ -404,7 +404,7 @@ def create_device_performance_scatter():
 # 3. MULTI-PAGE DASH APP
 # =======================
 app = Dash(__name__, suppress_callback_exceptions=True)
-
+server = app.server
 # Sidebar styling
 SIDEBAR_STYLE = {
     'position': 'fixed',
@@ -660,5 +660,6 @@ def render_page_content(pathname):
         html.P(f"The pathname {pathname} was not recognised..."),
     ])
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# Run the app locally on a specific port (e.g., 8051)
+if __name__ == '__main__':
+    app.run_server(debug=True, port=8051)
