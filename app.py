@@ -662,4 +662,4 @@ def render_page_content(pathname):
 
 # Run the app locally on a specific port (e.g., 8051)
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8051)
+    app.run(debug=True, port=8051)
