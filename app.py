@@ -660,6 +660,6 @@ def render_page_content(pathname):
         html.P(f"The pathname {pathname} was not recognised..."),
     ])
 
-# Run the app locally on a specific port (e.g., 8051)
-if __name__ == '__main__':
-    app.run(debug=True, port=8051)
+# === Run app ===
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=8050)
